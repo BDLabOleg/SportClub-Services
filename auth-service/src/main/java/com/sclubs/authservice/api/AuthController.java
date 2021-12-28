@@ -53,7 +53,7 @@ public final class AuthController {
             try {
                 authService.update(id, email, password, code);
 
-            //    final com.sclubs.authservice.repo.model.Auth auth = authService.fetchById(id)
+                final com.sclubs.authservice.repo.model.Auth auth = authService.fetchById(id)
                 return ResponseEntity.noContent().build();
             } catch (IllegalArgumentException e) {
                 return ResponseEntity.notFound().build();
